@@ -18,7 +18,6 @@ different expressions.
 4. if occur error: cannot link the "libcholmod.so.0.3", please `sudo cp external/SuiteSparse/lib/* /usr/lib/x86_64-linux-gnu/`
 
 # Usage
-```
 1. Correspondence phase:
 `./../bin/corres_resolve horse_ref.obj camel_ref.obj horse_camel.cons [1:10:50]`
 
