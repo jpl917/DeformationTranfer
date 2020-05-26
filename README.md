@@ -7,6 +7,8 @@ This will compute the deformations between pose_0.obj, pose_1.obj, ...,
 pose_19.obj and transfer the deformations onto emily mesh and obtain 
 different expressions.
 
+The emily-2-pose data are borrowed from ZJU facewarehouse and USC emily project.
+
 # Dependency
 1. CHOLMOD (http://www.cise.ufl.edu/research/sparse/cholmod/)
 2. UMFPACK (http://www.cise.ufl.edu/research/sparse/umfpack/)
@@ -48,27 +50,12 @@ simutanously), and drag with right mouse button pressed to zoom the view.
 
 `./corrstool [source_model] [target_model]` or `./corrstool horse_ref.obj camel_ref.obj`
 
-* move the cursor to somewhere in the model you want to mark and press =P= to mark this point
-
-* after having specifed marker points on both models, press =A= to "commit" this point pair to correspondence list, 
-
-* if you hit =A= by mistake, just hit =U= (undo) to recover from that.
-
-* you can view models in wired mode by pressing =M=, and strike it again to get back to
-solid mode. 
-
-* If you want to switch to another point on the same piece of triangle, 
-just hit =C= many times until you get what you want.
-
-* After all marker points has been specified, press =W= to write the
-correspondence to a .cons file (default.cons by default).
-
-0. p: Mark this Point
-1. a: AppendCurrent加入当前点
-2. m: SwitchRenderMode切换渲染模型
-3. c: SwitchVertex
-4. w: WriteToFile
-5. u: Undo
+0. P: Mark this Point ( move the cursor to somewhere in the model you want to mark and mark this point)
+1. A: Append Current Vertex (after having specifed marker points on both models, commit this point pair to correspondence list, )
+2. M: SwitchRenderMode (you can view models in wired mode by pressing =M=, and strike it again to get back to solid mode. )
+3. C: SwitchVertex (switch to another point on the same piece of triangle)
+4. U: Undo (if you hit =A= by mistake, just hit =U= (undo) to recover from that.)
+5. W: WriteToFile (After all marker points has been specified, write the correspondence to a .cons file (default.cons by default).)
 
 # Reference
 1. Robert W. Sumner, Jovan Popović. Deformation Transfer for Triangle Meshes. Siggraph 2004. 
